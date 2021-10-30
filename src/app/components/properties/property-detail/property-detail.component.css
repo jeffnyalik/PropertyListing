@@ -1,0 +1,25 @@
+.card {
+    min-height: 500px;
+}
+
+.tab-panel {
+    border: 1px solid #ddd;
+    padding: 10px;
+    max-height: fit-content;
+    background-color: #ffff;
+    border-radius: 2px;
+}
+
+.card img {
+    height: 200px;
+    padding: 10px;
+}
+
+.card-img-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.card-title {
+    color: #0069d9;
+}

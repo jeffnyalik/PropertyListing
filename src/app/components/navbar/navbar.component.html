@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" routerLinkActive="activate" routerLink="">PropertyListing</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse show" id="navbarSupportedContent" [ngClass]="{ 'show': navbarOpen }">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="activate" routerLink="">Buy Property</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="activate" routerLink="/rent-property">Rent Property</a>
+                </li> -->
+                <li class="nav-item">
+                    <button class="nav-link btn btn-sm btn-outline-secondary rounded-0" routerLinkActive="active" routerLink="/add-property">
+                    <span style="color: #ffff;">List Your Property</span>
+                </button>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <button class="nav-link btn btn-sm btn-outline-secondary rounded-0" routerLinkActive="active" routerLink="/user-register">
+                        <span style="color: #ffff;">Register</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link btn btn-sm btn-outline-primary rounded-0 ml-2" routerLinkActive="active" routerLink="/user-login">
+                        <span style="color: #ffff;">Sign In</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

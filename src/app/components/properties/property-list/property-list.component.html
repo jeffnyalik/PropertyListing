@@ -1,0 +1,17 @@
+<div>
+    <div class="row">
+        <div class="col-md-5">
+            <input [(ngModel)]='city' class="form-control" placeholder="Search by name eg Nairobi">
+        </div>
+        <div class="col-md-7">
+            <span class="d-flex justify-content-end">Today's Date: {{Today | date }}</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div *ngFor="let property of properties|filter:city:'city'" class="shadow-sm col-md-3 p-3">
+        <app-property-card [property]=property></app-property-card>
+    </div>
+</div>

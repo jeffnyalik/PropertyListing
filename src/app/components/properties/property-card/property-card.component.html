@@ -1,0 +1,39 @@
+<div class="card rounded-0">
+    <div class="card-img-wrapper">
+        <img *ngIf="property.image" class="default-img card-img-top" src="../../../assets/images/{{property.image}}.jpg" alt="my-image">
+        <img *ngIf="!property.image" class="default-img card-img-top" src="../../../assets/images/default.png" alt="my-image">
+
+        <ul class="list-inline text-center member-icons animate">
+            <li class="list-inline-item">
+                <button class="btn btn-info btn-sm rounded-0" routerLink="/property-detail/{{property.id}}"><i class="fa fa-edit"></i></button>
+            </li>
+            <li class="list-inline-item">
+                <button class="btn btn-primary btn-sm rounded-0"><i class="fa fa-address-book"></i></button>
+            </li>
+
+        </ul>
+    </div>
+    <div class="card-body p-2">
+        <div class="card-text text-center">
+            <span class="text-primary">{{property.name}}</span> <span class="ml-4"><small class="text-muted">{{property.city}}</small></span>
+        </div>
+
+        <hr>
+        <div class="row ml-4">
+            <div class="col-md-5">
+                <span>Price</span>
+            </div>
+            <div class="col-md-5">
+                <span>{{property.price}}</span>
+            </div>
+        </div>
+        <div class="row ml-4">
+            <div class="col-md-5">
+                <span>Type</span>
+            </div>
+            <div class="col-md-5">
+                <span>{{property.type}}</span>
+            </div>
+        </div>
+    </div>
+</div>
