@@ -1,4 +1,4 @@
-import { LowerCasePipe } from '@angular/common';
+
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -7,7 +7,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
   transform(value: any[], filterString: string, propName: string): any {
-
     const resultArray = [];
     if (value){
     if (value.length === 0 || filterString === '' || propName === '') {
@@ -15,9 +14,8 @@ export class FilterPipe implements PipeTransform {
     }
 
     for (const item of value) {
-      if (item[propName] === filterString) {
+      if (item[propName].toLocaleLowerCase() === filterString.toLocaleLowerCase()) {
         resultArray.push(item);
-        propName.toLowerCase();
       }
     }
     return resultArray
